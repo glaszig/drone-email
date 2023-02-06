@@ -7,7 +7,7 @@ import (
 
 	log "github.com/Sirupsen/logrus"
 	"github.com/aymerick/douceur/inliner"
-	"github.com/drone/drone-go/template"
+	"github.com/glaszig/drone-template-lib/template"
 	"github.com/jaytaylor/html2text"
 	gomail "gopkg.in/mail.v2"
 )
