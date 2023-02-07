@@ -29,7 +29,7 @@ name: default
 
 steps:
   - name: notify
-    image: drillster/drone-email
+    image: glaszig/drone-email
     settings:
       from.address: noreply@github.com
       from.name: John Smith
@@ -46,7 +46,7 @@ The Email plugin supports reading credentials and other parameters from the Dron
 ```diff
 steps:
   - name: notify:
-    image: drillster/drone-email
+    image: glaszig/drone-email
     settings:
       from.address: noreply@github.com
       host: smtp.mailgun.org
@@ -82,17 +82,17 @@ provided as a string or as a remote URL which gets fetched and parsed:
 
 * **subject** - A handlebars template to create a custom subject. For more
   details take a look at the [docs](http://handlebarsjs.com/). You can see the
-  default template [here](https://github.com/Drillster/drone-email/blob/master/defaults.go#L14)
+  default template [here](https://github.com/glaszig/drone-email/blob/master/defaults.go#L14)
 * **body** - A handlebars template to create a custom template. For more
   details take a look at the [docs](http://handlebarsjs.com/). You can see the
-  default template [here](https://github.com/Drillster/drone-email/blob/master/defaults.go#L19-L267)
+  default template [here](https://github.com/glaszig/drone-email/blob/master/defaults.go#L19-L267)
 
 Example configuration that generate a custom email:
 
 ```yaml
 steps:
   - name: notify
-    image: drillster/drone-email
+    image: glaszig/drone-email
     settings:
       from.address: noreply@github.com
       host: smtp.mailgun.org
@@ -120,7 +120,7 @@ Example configuration that skips SSL verification:
 ```diff
 steps:
   - name: notify
-    image: drillster/drone-email
+    image: glaszig/drone-email
     settings:
       from: noreply@github.com
       host: smtp.mailgun.org
@@ -139,7 +139,7 @@ You may want to disable STARTTLS, e.g., with faulty and/or internal servers:
 ```diff
 steps:
   - name: notify
-    image: drillster/drone-email
+    image: glaszig/drone-email
     settings:
       from: noreply@github.com
       host: smtp.mailgun.org
